@@ -1,0 +1,113 @@
+{
+    "nodes": [
+        {
+            "name": "Collocation extraction"
+        },
+        {
+            "name": "Automatic hyperlinking"
+        },
+        {
+            "name": "Information extraction"
+        },
+        {
+            "name": "Mobile translation"
+        },
+        {
+            "name": "Part-of-speech tagging"
+        },
+        {
+            "name": "Semantic role labeling"
+        },
+        {
+            "name": "Anaphora"
+        },
+        {
+            "name": "No language mentioned"
+        },
+        {
+            "name": "Question answering"
+        },
+        {
+            "name": "Automatic summarization"
+        },
+        {
+            "name": "Machine translation"
+        },
+        {
+            "name": "Phrase chunking"
+        },
+        {
+            "name": "Named-entity recognition"
+        },
+        {
+            "name": "Language identification"
+        }
+    ],
+    "links": [
+        {
+            "source": "No language mentioned",
+            "target": "Collocation extraction",
+            "value": 4
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Mobile translation",
+            "value": 3
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Information extraction",
+            "value": 3
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Semantic role labeling",
+            "value": 2
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Part-of-speech tagging",
+            "value": 3
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Anaphora",
+            "value": 2
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Machine translation",
+            "value": 3
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Automatic summarization",
+            "value": 3
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Named-entity recognition",
+            "value": 1
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Phrase chunking",
+            "value": 2
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Automatic hyperlinking",
+            "value": 2
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Language identification",
+            "value": 1
+        },
+        {
+            "source": "No language mentioned",
+            "target": "Question answering",
+            "value": 1
+        }
+    ]
+}
