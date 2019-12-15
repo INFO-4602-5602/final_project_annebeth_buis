@@ -153,8 +153,8 @@
     // Inspiration from: https://www.d3-graph-gallery.com/graph/stackedarea_template.html
 
     // Set up the bounds of the visualization
-    var margin = { top: 40, right: 40, bottom: 60, left: 0 };
-    var width = 1200 - margin.right - margin.left;
+    var margin = { top: 40, right: 40, bottom: 60, left: 30 };
+    var width = 800 - margin.right - margin.left;
     var height = 550 - margin.top - margin.bottom;
 
     // Set up the first SVG that gives us a canvas to draw on
@@ -165,7 +165,7 @@
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     //Read the data
-    d3.csv("data.csv", (function(data) {
+    d3.csv("/data/stacked_area.csv", (function(data) {
 
       // List of groups = header of the csv files
       var keys = data.columns.slice(1)
@@ -173,7 +173,7 @@
       // color palette
       var color = d3.scaleOrdinal()
         .domain(keys)
-        .range(d3.schemeSet2);
+        .range(d3.schemePaired);
 
       //stack the data?
       var stackedData = d3.stack()
@@ -205,7 +205,7 @@
 
       // Add Y axis
       var y = d3.scaleLinear()
-        .domain([0, 350])
+        .domain([0, 650])
         .range([ height, 0 ]);
       svg.append("g")
         .call(d3.axisLeft(y).ticks(5))
@@ -218,11 +218,6 @@
           .attr("height", height )
           .attr("x", 0)
           .attr("y", 0);
-
-      // Add brushing
-      var brush = d3.brushX()                 // Add the brush feature using the d3.brush function
-          .extent( [ [0,0], [width,height] ] ) // initialise the brush area: start at 0,0 and finishes at width,height: it means I select the whole graph area
-          .on("end", updateChart) // Each time the brush selection changes, trigger the 'updateChart' function
 
       // Create the scatter variable: where both the circles and the brush take place
       var areaChart = svg.append('g')
@@ -243,37 +238,6 @@
           .attr("class", function(d) { return "myArea " + createClassName(d.key) })
           .style("fill", function(d) { return color(d.key); })
           .attr("d", area)
-
-      // Add the brushing
-      areaChart
-        .append("g")
-          .attr("class", "brush")
-          .call(brush);
-
-      var idleTimeout
-      function idled() { idleTimeout = null; }
-
-      // A function that update the chart for given boundaries
-      function updateChart() {
-
-        extent = d3.event.selection
-
-        // If no selection, back to initial coordinate. Otherwise, update X axis domain
-        if(!extent){
-          if (!idleTimeout) return idleTimeout = setTimeout(idled, 350); // This allows to wait a little bit
-          x.domain(d3.extent(data, function(d) { return d.year; }))
-        }else{
-          x.domain([ x.invert(extent[0]), x.invert(extent[1]) ])
-          areaChart.select(".brush").call(brush.move, null) // This remove the grey brush area as soon as the selection has been done
-        }
-
-        // Update axis and area position
-        xAxis.transition().duration(1000).call(d3.axisBottom(x).ticks(5))
-        areaChart
-          .selectAll("path")
-          .transition().duration(1000)
-          .attr("d", area)
-        }
 
         // What to do when one group is hovered
         var highlight = function(d){
@@ -323,9 +287,9 @@
     // Inspiration from: TODO.
 
     // Set up the bounds of the visualization
-    var margin_square = {top: 20, right: 20, bottom: 200, left: 20};
-    var width_square = 430 - margin_square.left - margin_square.right;
-    var height_square = 430 - margin_square.top - margin_square.bottom;
+    var margin_square = {top: 20, right: 20, bottom: 100, left: 205};
+    var width_square = 800 - margin_square.left - margin_square.right;
+    var height_square = 2500 - margin_square.top - margin_square.bottom;
 
     // Set up the first SVG that gives us a canvas to draw on
     var svg_2 = d3.select("#visualization_2").append("svg")
@@ -334,7 +298,7 @@
       .append("g")
       .attr("transform", "translate(" + margin_square.left + "," + margin_square.top + ")");
 
-    d3.csv("matrix_data.csv", function(error, rows) {
+    d3.csv("data/matrix_data.csv", function(error, rows) {
 
         // Going from wide to long format
         var data = [];
@@ -352,21 +316,46 @@
           }
         });
 
+        // Create a tooltip
+        var tooltip = d3.select("#visualization_2")
+          .append("div")
+          .style("opacity", 0)
+          .attr("class", "tooltip")
+          .attr("id", "bubble_tooltip")
+          .style("background-color", "white")
+          .style("border", "solid")
+          .style("border-width", "1px")
+          .style("border-radius", "5px")
+          .style("padding", "5px")
+
+        // Three function that change the tooltip when user hover / move / leave a cell
+        var mouseover = function(d) {
+          tooltip.style("opacity", 1)
+        }
+        var mousemove = function(d) {
+          tooltip
+            .html(d.value + " papers")
+            .style("left", (d3.event.pageX - 200) + "px")
+            .style("top", (d3.event.pageY - 650) + "px");
+        }
+        var mouseleave = function(d) {
+          tooltip.style("opacity",  0)
+        }
+
         // List of all variables and number of them
         var languages = d3.set(data.map(function(d) { return d.x })).values()
-        // console.log("domain", domain);
+        // console.log("languages", languages);
         var topics = d3.set(data.map(function(d) { return d.y })).values()
-        // console.log("other", other);
 
         // color palette
         var color = d3.scaleOrdinal()
           .domain(languages)
-          .range(d3.schemeSet2);
+          .range(d3.schemePaired);
 
         // Create a size scale for bubbles on top right. Watch out: must be a rootscale!
         var size = d3.scaleSqrt()
-          .domain([0, 400])
-          .range([0, 9]);
+          .domain([0, 350])
+          .range([0, 30]);
 
         // X scale
         var x = d3.scalePoint()
@@ -400,57 +389,32 @@
               }
             })
             .style("opacity", 0.8)
+            .on("mouseover", mouseover)
+            .on("mousemove", mousemove)
+            .on("mouseleave", mouseleave);
 
-        var axis_height = height_square + 15;
         // Build X scales and axis:
-        var xAxis = d3.scaleBand()
+        var axis_height = height_square + 15;
+        var xAxis = d3.scalePoint()
           .range([ 0, width_square ])
-          .domain(languages)
-          .padding(0.05);
+          .domain(languages);
         svg_2.append("g")
-          .style("font-size", 15)
-          .attr("transform", "translate(0," + height_square + ")")
-          .selectAll("text")
-            .style("text-anchor", "end")
-            .attr("transform", "rotate(-65)")
+          .style("font-size", 13)
+          .attr("transform", "translate(0," + axis_height + ")")
+          .style("text-anchor", "end")
           .call(d3.axisBottom(xAxis).tickSize(0))
-          .select(".domain").remove()
+          .selectAll("text")
+            .attr("transform", "rotate(-45)");
 
-        // var xAxis = svg_2.append("g")
-        //   .attr("transform", "translate(0," + axis_height + ")")
-        //   .selectAll("text")
-        //     .style("text-anchor", "end")
-        //     .attr("transform", "rotate(-65)")
-        //   .call(d3.axisBottom(x));
-          // .selectAll("text")
-          // .style("text-anchor", "end")
-          // // .attr("x", width)
-          // // .attr("y", height+40 )
-          // .attr("transform", "rotate(-65)");
-          // .call(d3.axisBottom(x))
-
-        // // Add X axis label:
-        // svg_2.append("text")
-        //     .attr("text-anchor", "end")
-        //     .attr("x", width)
-        //     .attr("y", height+40 )
-        //     .attr("transform", "rotate(65)");
-
-        // // Add Y axis label:
-        // svg.append("text")
-        //     .attr("text-anchor", "end")
-        //     .attr("x", 0)
-        //     .attr("y", -20 )
-        //     .text("# of papers")
-        //     .attr("text-anchor", "start")
-        //
-        // // Add Y axis
-        // var y = d3.scaleLinear()
-        //   .domain([0, 350])
-        //   .range([ height, 0 ]);
-        // svg.append("g")
-        //   .call(d3.axisLeft(y).ticks(5))
-
+        // Add Y axis
+        var yAxis = d3.scalePoint()
+          .domain(topics.reverse())
+          .range([ height_square, 0 ]);
+        svg_2.append("g")
+        .style("font-size", 13)
+          .attr("transform", "translate(-30," + 0 + ")")
+          .style("text-anchor", "end")
+          .call(d3.axisLeft(yAxis).tickSize(0))
       })
 
 // Function for creating stacked area class names

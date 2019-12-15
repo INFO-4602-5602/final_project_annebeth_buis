@@ -1,0 +1,69 @@
+Statistical Machine Translation,bleu,statistical,source,target,phrases,smt,reordering
+Dependency Parsing,dependency,head,czech,depen,dependent,treebank
+Multilingual Resources,languages,spanish,russian,multilingual,lan,hindi,swedish
+Relation Extraction,pattern,relation,extraction,instances,pairs,seed
+Collocations/Compounds,compound,collocation,adjectives,nouns,entailment,expressions,MWEs
+Graph Theory + BioNLP,graph,medical,edge,patient,clinical,vertex,text,report,disease
+Sentiment Analysis,question,answer,answering,opinion,sentiment,negative,positive,polarity
+Discriminative Sequence Models,label,conditional,sequence,random,discriminative,inference
+Metrics + Human Evaluation,human,measure,metric,score,quality,reference,automatic,correlation,judges
+Statistical Parsing,parse,treebank,trees,Penn,Collins,parsers,Charniak,accuracy,WSJ
+ngram Language Models,n-gram,bigram,prediction,trigram,unigram,trigger,show,baseline
+Algorithmic Efficiency,search,length,size,space,cost,algorithms,large,complexity,pruning
+Bilingual Word Alignment,alignment,align/ed,pair,statistical,source,target,links,Brown
+Reranking,score,candidate,list,best,correct,hypothesis,selection,rank/ranking,scoring,top,confidence
+Evaluation Metrics,precision,recall,extraction,threshold,methods,filtering,extract,high,phrases,filter,f-measure
+Methods (Experimental/Evaluation),experiments,accuracy,experiment,average,size,100,baseline,better,per,sets
+Machine Learning Optimization,function,value,parameter,local,weight,optimal,solution,criterion,variables
+Biomedical Named Entity Recognition,biomedical,gene,term,protein,abstracts,extraction,biological
+Word Segmentation,segment/ation,character,segment,boundary/ies,token/ization
+Document Retrieval,document,retrieval,query/ies,term,relevant/ance,collection,indexing,search
+SRL/Framenet,argument,role,predicate,frame,FrameNet,predicates,labeling,PropBank
+Wordnet/Multilingual Ontologies,ontology/ies,italian,domain,resource,i.e,ontological,concepts
+WebSearch + Wikipedia,web,search,page,xml,http,engine,document,wikipedia,content,html,query,Google
+Clustering + Distributional Similarity,similar/ity,cluster/ing,vector,distance,matrix,measure,pair,cosine,LSA
+Word Sense Disambiguation,WordNet,senses,disambiguation,WSD,nouns,target,synsets,Yarowsky
+Machine Learning Classification,classification,classifier,examples,kernel,class,SVM,accuracy,decision
+Linguistic Annotation,annotation/ed,agreement,scheme,annotators,corpora,tools,guidelines
+Tutoring Systems,student,reading,course,computer,tutoring,teaching,writing,essay
+Chunking/Memory Based Models,chunk/ing,pos,accuracy,best,memory-based,Daelemans
+Named Entity Recognition,entity/ies,name/d,person,proper,recognition,location,organization,mention
+Dialog,dialogue,utterance,spoken,dialog/ues,act,interaction,conversation,initiative,meeting,state,agent
+Summarization,topic,summarization,summary/ies,document,news,articles,content,automatic,stories
+Multimodal (Mainly Generation),object,multimodal,image,referring,visual,spatial,gesture,reference,description
+Text Categorization,category/ies,group,classification,texts,categorization,style,genre,author
+Morphology,morphological,arabic,morphology,forms,stem,morpheme,root,suffix,lexicon
+Coherence Relations,relation,rhetorical,unit,coherence,texts,chains
+Spell Correction,error,correct/ion,spelling,detection,rate
+Anaphora Resolution,resolution,pronoun,anaphora,antecedent,pronouns,coreference,anaphoric
+Question Answering Dialog System,response,you,expert,request,yes,users,query,question,call,database
+UI/Natural Language Interface,users,database,interface,a71,message,interactive,access,display
+Computational Phonology,phonological,vowel,syllable,stress,phonetic,phoneme,pronunciation
+Neural Networks/Human Cognition,network,memory,acquisition,neural,cognitive,units,activation,layer
+Temporal IE/Aspect,event,temporal,tense,aspect,past,reference,before,state
+Prosody,prosody/ic,pitch,boundary/ies,accent,cues,repairs,phrases,spoken,intonation,tone,duration
+Lexical Acquisition Of Verb Subcategorization,class/es,verb,paraphrase,subcategorization,frames
+Probability Theory,probability/ies,distribution,probabilistic,estimate/tion,entropy,statistical,likelihood,parameters
+Collocations Measures,frequency/ies,corpora,statistical,distribution,association,statistics,mutual,co-occurrences
+POS Tagging,tag/ging,POS,tags,tagger,part-of-speech,tagged,accuracy,Brill,corpora,tagset
+Machine Translation (Non Statistical + Bitexts),target,source,bilingual,translations,transfer,parallel,corpora
+Automata Theory,string,sequence,left,right,transformation,match
+Tree Adjoining Grammars ,trees,derivation,grammars,TAG,elementary,auxiliary,adjoining
+Finite State Models (Automata),state,finite,finite-state,regular,transition,transducer
+Classic Parsing,grammars,parse,chart,context-free,edge,production,CFG,symbol,terminal
+Syntactic Trees,node,constraints,trees,path,root,constraint,label,arcs,graph,leaf,parent
+Planning/BDI,plan/ning,action,goal,agent,explanation,reasoning
+Dictionary Lexicons,dictionary/ies,lexicon,entry/ies,definition,LDOCE,Linguistic Example Sentences,John,Mary,man,book,examples,Bill,who,dog,boy,coordination,clause
+Syntactic Theory,grammatical,theory,functional,constituent,constraints,LFG
+Formal Computational Semantics,semantics,logic/al,scope,interpretation,meaning,representation,predicate
+Speech Acts + BDI,speaker,utterance,act,hearer,belief,proposition,focus,utterance
+PP Attachment,ambiguity/ies/ous,disambiguation,attachment,preference,preposition
+Natural Language Generation,generation/ing,generator,choice,generated,realization,content
+Lexical Semantics,meaning,semantics,metaphor,interpretation,object,role
+Categorial Grammar/Logic,proof,logic,definition,let,formula,theorem,every,iff,calculus
+Syntax,clause,head,subject,phrases,object,verbs,relative,nouns,modifier
+Unification Based Grammars,unification,constraints,structures,value,HPSG,default,head
+Concept Ontologies / Knowledge Rep,concept,conceptual,attribute,relation,base
+MUC-Era Information Extraction,template,message,slot,extraction,key,event,MUC,fill
+Speech Recognition,recognition,acoustic,error,speaker,rate,adaptation,recognizer,phone,ASR
+ATIS dialog,spoken,atis,flight,darpa,understanding,class,database,workshop,utterances

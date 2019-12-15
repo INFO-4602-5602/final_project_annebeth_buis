@@ -28,7 +28,7 @@ with open('wals_languages.csv/language.csv') as csvfile:
 #     json.dump(language_data, outfile, indent=4)
 
 ud_languages = []
-with open('UDLanguages.csv') as csvfile:
+with open('data/UDLanguages.csv') as csvfile:
     lreader = csv.reader(csvfile, delimiter=",", quotechar='"')
     for i, row in enumerate(lreader):
         if i > 0:
@@ -36,7 +36,7 @@ with open('UDLanguages.csv') as csvfile:
 print("UD Languages count: ", len(ud_languages))
 
 um_languages = []
-with open('UnimorphLanguages.csv') as csvfile:
+with open('data/UnimorphLanguages.csv') as csvfile:
     lreader = csv.reader(csvfile, delimiter=",", quotechar='"')
     for i, row in enumerate(lreader):
         if i > 0:
@@ -46,6 +46,6 @@ print("Unimorph Languages count: ", len(um_languages))
 languages = list(set(ud_languages + um_languages))
 print("Languages count: ", len(languages))
 
-with open('languages.csv', 'w') as outfile:
+with open('data/languages.csv', 'w') as outfile:
     for l in languages:
         outfile.write(l + "\n")
