@@ -1,0 +1,111 @@
+,Language,ISO 639-3,Forms,Paradigms,Nouns,Verbs,Adjectives,Source,License,,repo,2016 Shared Task Splits,2017 Shared Task Splits,Typology,Templatic,wiki link,Type
+,Adyghe,ady,20475,1666,✔,,✔,,,,https://github.com/unimorph/ady,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Adyghe_language,living
+,Albanian,sqi,33483,589,✔,✔,,,,,https://github.com/unimorph/sqi,no,yes,fusional,false,https://en.wikipedia.org/wiki/Albanian_language,living
+,Ancient Greek,grc,41593,2431,✔,,✔,,,,https://github.com/unimorph/grc,no,no,fusional,false,https://en.wikipedia.org/wiki/Ancient Greek_language,historical
+,Arabic,ara,140003,4134,✔,✔,✔,,,,https://github.com/unimorph/ara,yes,yes,fusional,true,https://en.wikipedia.org/wiki/Arabic_language,living
+,Armenian,hye,338461,7033,✔,✔,✔,,,,https://github.com/unimorph/hye,no,yes,fusional,false,https://en.wikipedia.org/wiki/Armenian_language,living
+,Asturian,ast,29797,436,✔,✔,✔,,,,https://github.com/unimorph/ast,no,no,fusional,false,https://en.wikipedia.org/wiki/Asturian_language,living
+,Azerbaijani,aze,8004,340,✔,✔,,,,,https://github.com/unimorph/aze,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Azerbaijani_language,living
+,Bashkir,bak,12168,1084,✔,,✔,,,,https://github.com/unimorph/bak,no,no,fusional,false,https://en.wikipedia.org/wiki/Bashkir_language,living
+,Basque,eus,11889,26,,✔,,,"",,https://github.com/unimorph/eus,no,yes,agglutinative,false,https://en.wikipedia.org/wiki/Basque_language,living
+,Belarusian,bel,16113,1027,✔,✔,✔,,,,https://github.com/unimorph/bel,no,no,fusional,false,https://en.wikipedia.org/wiki/Belarusian_language,living
+,Bengali,ben,4443,136,✔,✔,,,,,https://github.com/unimorph/ben,no,yes,fusional,false,https://en.wikipedia.org/wiki/Bengali_language,living
+,Breton,bre,2294,44,✔,✔,,,,,https://github.com/unimorph/bre,no,no,fusional,false,https://en.wikipedia.org/wiki/Breton_language,living
+,Bulgarian,bul,55730,2468,✔,✔,✔,,,,https://github.com/unimorph/bul,no,yes,fusional,false,https://en.wikipedia.org/wiki/Bulgarian_language,living
+,Catalan,cat,81576,1547,,✔,,,,,https://github.com/unimorph/cat,no,yes,fusional,false,https://en.wikipedia.org/wiki/Catalan_language,living
+,Central Kurdish,ckb,22990,274,✔,✔,✔,,"LGPLLR",,https://github.com/unimorph/ckb,no,yes,fusional,false,https://en.wikipedia.org/wiki/Central Kurdish_language,living
+,Classical Armenian,xcl,97181,4300,✔,✔,✔,,,,https://github.com/unimorph/xcl,no,no,fusional,false,https://en.wikipedia.org/wiki/Classical Armenian_language,historical
+,Classical Syriac,syc,3652,160,✔,,✔,,,,https://github.com/unimorph/syc,no,no,fusional,true,https://en.wikipedia.org/wiki/Classical Syriac_language,historical
+,Cornish,cor,469,9,✔,✔,,,,,https://github.com/unimorph/cor,no,no,fusional,false,https://en.wikipedia.org/wiki/Cornish_language,living
+,Crimean Tatar,crh,7514,1230,✔,✔,✔,,,,https://github.com/unimorph/crh,no,no,fusional,false,https://en.wikipedia.org/wiki/Crimean Tatar_language,living
+,Czech,ces,134527,5125,✔,✔,✔,,,,https://github.com/unimorph/ces,no,yes,fusional,false,https://en.wikipedia.org/wiki/Czech_language,living
+,Danish,dan,25503,3193,✔,✔,,,,,https://github.com/unimorph/dan,no,yes,fusional,false,https://en.wikipedia.org/wiki/Danish_language,living
+,Dutch,nld,55467,4993,,✔,✔,,,,https://github.com/unimorph/nld,no,yes,fusional,false,https://en.wikipedia.org/wiki/Dutch_language,living
+,English,eng,115523,22765,,✔,,,,,https://github.com/unimorph/eng,no,yes,fusional,false,https://en.wikipedia.org/wiki/English_language,living
+,Estonian,est,38215,886,✔,✔,,,,,https://github.com/unimorph/est,no,yes,agglutinative,false,https://en.wikipedia.org/wiki/Estonian_language,living
+,Faroese,fao,45474,3077,✔,✔,✔,,,,https://github.com/unimorph/fao,no,yes,fusional,false,https://en.wikipedia.org/wiki/Faroese_language,living
+,Finnish,fin,2490377,57642,✔,✔,✔,,,,https://github.com/unimorph/fin,yes,yes,agglutinative,false,https://en.wikipedia.org/wiki/Finnish_language,living
+,French,fra,367732,7535,,✔,,,,,https://github.com/unimorph/fra,no,yes,fusional,false,https://en.wikipedia.org/wiki/French_language,living
+,Friulian,fur,8071,168,,✔,,,,,https://github.com/unimorph/fur,no,no,fusional,false,https://en.wikipedia.org/wiki/Friulian_language,living
+,Galician,gal,36801,486,,✔,,,,,https://github.com/unimorph/gal,no,no,fusional,false,https://en.wikipedia.org/wiki/Galician_language,living
+,Georgian,kat,74412,3782,✔,✔,✔,,,,https://github.com/unimorph/kat,yes,yes,agglutinative,false,https://en.wikipedia.org/wiki/Georgian_language,living
+,German,deu,179339,15060,✔,✔,,,,,https://github.com/unimorph/deu,yes,yes,fusional,false,https://en.wikipedia.org/wiki/German_language,living
+,Gothic,got,,,,,,,,,https://github.com/unimorph/got,no,no,fusional,false,https://en.wikipedia.org/wiki/Gothic_language,living
+,Greenlandic,kal,368,23,✔,,,,,,https://github.com/unimorph/kal,no,no,,,https://en.wikipedia.org/wiki/Greenlandic_language,
+,Haida,hai,7040,41,,✔,,,"–",,https://github.com/unimorph/hai,no,yes,agglutinative,false,https://en.wikipedia.org/wiki/Haida_language,living
+,Hebrew,heb,13818,510,✔,✔,,,,,https://github.com/unimorph/heb,no,yes,fusional,true,https://en.wikipedia.org/wiki/Hebrew_language,living
+,Hindi,hin,54438,258,,✔,,,,,https://github.com/unimorph/hin,no,yes,fusional,false,https://en.wikipedia.org/wiki/Hindi_language,living
+,Hungarian,hun,490394,13989,✔,✔,,,,,https://github.com/unimorph/hun,yes,yes,agglutinative,false,https://en.wikipedia.org/wiki/Hungarian_language,living
+,Icelandic,isl,76915,4775,✔,✔,,,,,https://github.com/unimorph/isl,no,yes,fusional,false,https://en.wikipedia.org/wiki/Icelandic_language,living
+,Ingrian,izh,1099,50,✔,,✔,,,,https://github.com/unimorph/izh,no,no,fusional,false,https://en.wikipedia.org/wiki/Ingrian_language,living
+,Irish,gle,107298,7464,✔,✔,✔,,,,https://github.com/unimorph/gle,no,yes,fusional,false,https://en.wikipedia.org/wiki/Irish_language,living
+,Italian,ita,509574,10009,,✔,,,,,https://github.com/unimorph/ita,no,yes,fusional,false,https://en.wikipedia.org/wiki/Italian_language,living
+,Kabardian,kbd,3092,250,✔,,✔,,,,https://github.com/unimorph/kbd,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Kabardian_language,living
+,Kannada,kan,6402,159,✔,✔,,,,,https://github.com/unimorph/kan,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Kannada_language,living
+,Karelian,krl,682,20,✔,,✔,,,,https://github.com/unimorph/krl,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Karelian_language,living
+,Kashubian,csb,509,37,✔,,,,,,https://github.com/unimorph/csb,no,no,fusional,false,https://en.wikipedia.org/wiki/Kashubian_language,living
+,Kazakh,kaz,357,26,✔,,,,,,https://github.com/unimorph/kaz,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Kazakh_language,living
+,Khakas,kjh,1200,75,✔,,,,,,https://github.com/unimorph/kjh,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Khakas_language,living
+,Khaling,klr,156097,591,,✔,,,"LGPLLR",,https://github.com/unimorph/klr,no,yes,agglutinative,false,https://en.wikipedia.org/wiki/Khaling_language,living
+,Ladin,lld,180,7656,✔,✔,,,,,https://github.com/unimorph/lld,no,no,fusional,false,https://en.wikipedia.org/wiki/Ladin_language,living
+,Latin,lat,509182,17214,✔,✔,✔,,,,https://github.com/unimorph/lat,no,yes,fusional,false,https://en.wikipedia.org/wiki/Latin_language,ancient
+,Latvian,lav,136998,7548,✔,✔,✔,,,,https://github.com/unimorph/lav,no,yes,fusional,false,https://en.wikipedia.org/wiki/Latvian_language,living
+,Lithuanian,lit,34130,1458,✔,✔,✔,,,,https://github.com/unimorph/lit,no,yes,fusional,false,https://en.wikipedia.org/wiki/Lithuanian_language,living
+,Livonian,liv,3987,203,✔,✔,✔,,,,https://github.com/unimorph/liv,no,no,fusional,false,https://en.wikipedia.org/wiki/Livonian_language,living
+,Livvi,olo,3987,,,,,,"–",,https://github.com/unimorph/olo,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Livvi_language,living
+,Low German,nds,,,,,,,,,https://github.com/unimorph/nds,no,no,fusional,false,https://en.wikipedia.org/wiki/Low German_language,living
+,Lower Sorbian,dsb,20121,994,✔,✔,✔,,,,https://github.com/unimorph/dsb,no,yes,fusional,false,https://en.wikipedia.org/wiki/Lower Sorbian_language,living
+,Ludian,lud,400,,,,,,"–",,https://github.com/unimorph/lud,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Ludian_language,living
+,Macedonian,mkd,168057,10313,✔,✔,✔,,,,https://github.com/unimorph/mkd,no,yes,fusional,false,https://en.wikipedia.org/wiki/Macedonian_language,living
+,Maltese,mlt,3584,112,✔,✔,,,,,https://github.com/unimorph/mlt,yes,no,fusional,false,https://en.wikipedia.org/wiki/Maltese_language,living
+,Manx,glv,14,1,,,,,,,https://github.com/unimorph/glv,no,no,fusional,false,https://en.wikipedia.org/wiki/Manx_language,living
+,Mapudungun,arn,783,26,,✔,,,,,https://github.com/unimorph/arn,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Mapudungun_language,living
+,Middle French,frm,36970,603,,✔,,,,,https://github.com/unimorph/frm,no,no,fusional,false,https://en.wikipedia.org/wiki/Middle French_language,historical
+,Middle High German,gmh,708,29,✔,✔,,,,,https://github.com/unimorph/gmh,no,no,fusional,false,https://en.wikipedia.org/wiki/Middle High German_language,historical
+,Middle Low German,gml,1513,52,✔,✔,✔,,,,https://github.com/unimorph/gml,no,no,fusional,false,https://en.wikipedia.org/wiki/Middle Low German_language,historical
+,Modern Greek,ell,199763,11906,✔,✔,✔,,,,https://github.com/unimorph/ell,no,no,fusional,false,https://en.wikipedia.org/wiki/Modern Greek_language,living
+,Murrinhpatha,mwf,1110,29,,✔,,,,,https://github.com/unimorph/mwf,no,no,,,https://en.wikipedia.org/wiki/Murrinhpatha_language,
+,Navajo,nav,12354,674,✔,✔,,,,,https://github.com/unimorph/nav,yes,yes,agglutinative,false,https://en.wikipedia.org/wiki/Navajo_language,living
+,Neapolitan,nap,1808,40,,✔,,,,,https://github.com/unimorph/nap,no,no,fusional,false,https://en.wikipedia.org/wiki/Neapolitan_language,living
+,Norman,xno,280,5,,✔,,,,,https://github.com/unimorph/xno,no,no,,,https://en.wikipedia.org/wiki/Norman_language,
+,North Frisian,frr,3204,51,,✔,,,,,https://github.com/unimorph/frr,no,no,fusional,false,https://en.wikipedia.org/wiki/North Frisian_language,living
+,Northern Kurdish,kmr,216370,15083,✔,✔,✔,,"LGPLLR",,https://github.com/unimorph/kmr,no,yes,fusional,false,https://en.wikipedia.org/wiki/Northern Kurdish_language,living
+,Northern Sami,sme,62677,2103,✔,✔,✔,,,,https://github.com/unimorph/sme,no,yes,fusional,false,https://en.wikipedia.org/wiki/Northern Sami_language,living
+,Norwegian Bokmål,nob,19238,5527,✔,✔,✔,,,,https://github.com/unimorph/nob,no,yes,fusional,false,https://en.wikipedia.org/wiki/Norwegian Bokmål_language,living
+,Norwegian Nynorsk,nno,15319,4689,✔,✔,✔,,,,https://github.com/unimorph/nno,no,yes,fusional,false,https://en.wikipedia.org/wiki/Norwegian Nynorsk_language,living
+,Occitan,oci,8316,174,,✔,,,,,https://github.com/unimorph/oci,no,no,fusional,false,https://en.wikipedia.org/wiki/Occitan_language,living
+,Old Church Slavonic,chu,4148,152,✔,,,,,,https://github.com/unimorph/chu,no,no,fusional,false,https://en.wikipedia.org/wiki/Old Church Slavonic_language,ancient
+,Old English,ang,42425,1867,✔,✔,✔,,,,https://github.com/unimorph/ang,no,no,fusional,false,https://en.wikipedia.org/wiki/Old English_language,historical
+,Old French,fro,123374,1700,✔,✔,,,,,https://github.com/unimorph/fro,no,no,fusional,false,https://en.wikipedia.org/wiki/Old French_language,historical
+,Old Irish,sga,1089,49,✔,✔,,,,,https://github.com/unimorph/sga,no,no,fusional,false,https://en.wikipedia.org/wiki/Old Irish_language,historical
+,Old Saxon,osx,22287,863,✔,✔,✔,,,,https://github.com/unimorph/osx,no,no,fusional,false,https://en.wikipedia.org/wiki/Old Saxon_language,historical
+,Pashto,pus,6945,395,✔,✔,✔,,,,https://github.com/unimorph/pus,no,no,fusional,false,https://en.wikipedia.org/wiki/Pashto_language,living
+,Persian,fas,37128,273,,✔,,,,,https://github.com/unimorph/fas,no,yes,fusional,false,https://en.wikipedia.org/wiki/Persian_language,living
+,Polish,pol,201024,10185,✔,✔,✔,,,,https://github.com/unimorph/pol,no,yes,fusional,false,https://en.wikipedia.org/wiki/Polish_language,living
+,Portuguese,por,303996,4001,,✔,,,,,https://github.com/unimorph/por,no,yes,fusional,false,https://en.wikipedia.org/wiki/Portuguese_language,living
+,Quechua,que,180004,1006,✔,✔,✔,,,,https://github.com/unimorph/que,no,yes,agglutinative,false,https://en.wikipedia.org/wiki/Quechua_language,living
+,Romanian,ron,80266,4405,✔,✔,✔,,,,https://github.com/unimorph/ron,no,yes,fusional,false,https://en.wikipedia.org/wiki/Romanian_language,living
+,Russian,rus,473481,28068,✔,✔,✔,,,,https://github.com/unimorph/rus,yes,yes,fusional,false,https://en.wikipedia.org/wiki/Russian_language,living
+,Sanskrit,san,33847,917,✔,,✔,,,,https://github.com/unimorph/san,no,no,fusional,false,https://en.wikipedia.org/wiki/Sanskrit_language,ancient
+,Scottish Gaelic,gla,781,73,,✔,✔,,,,https://github.com/unimorph/gla,no,yes,fusional,false,https://en.wikipedia.org/wiki/Scottish Gaelic_language,living
+,Serbo Croatian,hbs,840799,24419,✔,✔,✔,,,,https://github.com/unimorph/hbs,no,no,,,https://en.wikipedia.org/wiki/Serbo Croatian_language,
+,Slovenian,slv,60110,2535,✔,✔,✔,,,,https://github.com/unimorph/slv,no,yes,fusional,false,https://en.wikipedia.org/wiki/Slovenian_language,living
+,Spanish,spa,382955,5460,,✔,,,,,https://github.com/unimorph/spa,yes,yes,fusional,false,https://en.wikipedia.org/wiki/Spanish_language,living
+,Swahili,swc,10092,100,✔,✔,✔,,,,https://github.com/unimorph/swc,no,no,fusional,false,https://en.wikipedia.org/wiki/Swahili_language,living
+,Swedish,swe,78411,10553,✔,✔,✔,,,,https://github.com/unimorph/swe,no,yes,fusional,false,https://en.wikipedia.org/wiki/Swedish_language,living
+,Tajik,tgk,77,75,✔,✔,,,,,https://github.com/unimorph/tgk,no,no,fusional,false,https://en.wikipedia.org/wiki/Tajik_language,living
+,Tatar,tat,7832,1283,✔,✔,✔,,,,https://github.com/unimorph/tat,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Tatar_language,living
+,Telugu,tel,1548,127,✔,✔,,,,,https://github.com/unimorph/tel,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Telugu_language,living
+,Tibetan,bod,353,65,,✔,,,,,https://github.com/unimorph/bod,no,no,fusional,false,https://en.wikipedia.org/wiki/Tibetan_language,living
+,Turkish,tur,275460,3579,✔,✔,✔,,,,https://github.com/unimorph/tur,yes,yes,agglutinative,false,https://en.wikipedia.org/wiki/Turkish_language,living
+,Turkmen,tuk,810,68,✔,,,,,,https://github.com/unimorph/tuk,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Turkmen_language,living
+,Ukrainian,ukr,20904,1493,✔,✔,✔,,,,https://github.com/unimorph/ukr,no,yes,fusional,false,https://en.wikipedia.org/wiki/Ukrainian_language,living
+,Urdu,urd,12572,182,✔,✔,,,,,https://github.com/unimorph/urd,no,yes,fusional,false,https://en.wikipedia.org/wiki/Urdu_language,living
+,Uzbek,uzb,1260,15,✔,,,,,,https://github.com/unimorph/uzb,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Uzbek_language,living
+,Venetian,vec,18227,368,,✔,,,,,https://github.com/unimorph/vec,no,no,fusional,false,https://en.wikipedia.org/wiki/Venetian_language,living
+,Veps (Vepsian),vep,33196,,,,,,"–",,https://github.com/unimorph/vep,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Veps (Vepsian)_language,living
+,Votic,vot,1430,55,✔,,,,,,https://github.com/unimorph/vot,no,no,agglutinative,true,https://en.wikipedia.org/wiki/Votic_language,living
+,Welsh,cym,10641,183,,✔,,,,,https://github.com/unimorph/cym,no,yes,fusional,false,https://en.wikipedia.org/wiki/Welsh_language,living
+,West Frisian,fry,1429,85,,✔,,,,,https://github.com/unimorph/fry,no,no,fusional,false,https://en.wikipedia.org/wiki/West Frisian_language,living
+,Yiddish,yid,7986,803,✔,✔,✔,,,,https://github.com/unimorph/yid,no,no,fusional,false,https://en.wikipedia.org/wiki/Yiddish_language,living
+,Zulu,zul,49119,566,✔,✔,✔,,,,https://github.com/unimorph/zul,no,no,agglutinative,false,https://en.wikipedia.org/wiki/Zulu_language,living
