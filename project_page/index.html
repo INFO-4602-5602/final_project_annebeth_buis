@@ -2,14 +2,7 @@
 <html lang="en">
 
 <style>
-.link {
-  fill: none;
-  stroke: #000;
-  stroke-opacity: .2;
-}
-.link:hover {
-  stroke-opacity: .5;
-}
+
 </style>
 
 <head>
@@ -38,32 +31,6 @@
   <!--Import the D3 Library (version 4 in this case)-->
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
-  <!-- Load the sankey.js function -->
-  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/sankey.js"></script>
-
-  <!-- <script src="https://unpkg.com/d3-sankey@0"></script> -->
-  <!-- TODO: Remove this? -->
-  <!-- <script src="http://vizjs.org/viz.v1.1.0.min.js"></script> -->
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Languages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('img/language-tree.png')">
@@ -87,39 +54,45 @@
   <article>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <p>There are approximately 7000 languages in the world, according to <a href="https://www.ethnologue.com/" target="_blank">Ethnologue</a>.</p>
+        <div class="col-lg-12 col-md-10"> <!-- mx-auto"> -->
+          <div class="small-margin">
+            <p>There are approximately 7000 languages in the world, according to <a href="https://www.ethnologue.com/" target="_blank">Ethnologue</a>.
+              However, research in NLP (Natural Language Processing) and computational linguistics has traditionally focused mostly on English.
+              In this project, I will look at which languages the NLP community has worked on from the early 1980's to 2010.</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique arcu turpis, in aliquet leo fermentum ac. Nam ac luctus velit. Fusce quis felis vitae libero vulputate tristique vitae id dolor. Integer velit libero, congue ut metus sit amet, aliquam gravida quam. Etiam dictum faucibus rutrum. Mauris aliquam lacus et.</p>
+            <p>The <a href="https://www.aclweb.org/anthology/" target="_blank">ACL Anthology</a> hosts 53826 papers on computational linguistics and
+              natural language processing. In this project, we will look specifically at papers that were published in the Proceedings of the Association for computational
+              Linguistics (ACL). The data comes from the <a href="https://acl-arc.comp.nus.edu.sg/" target="_blank">ACL Anthology Reference Corpus</a>, which
+              contains XML files that were created with OCR from the original ACL PDFs.</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique arcu turpis, in aliquet leo fermentum ac. Nam ac luctus velit. Fusce quis felis vitae libero vulputate tristique vitae id dolor. Integer velit libero, congue ut metus sit amet, aliquam gravida quam. Etiam dictum faucibus rutrum. Mauris aliquam lacus et.</p>
+            <h2 class="section-heading">Languages in the ACL corpus</h2>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique arcu turpis, in aliquet leo fermentum ac. Nam ac luctus velit. Fusce quis felis vitae libero vulputate tristique vitae id dolor. Integer velit libero, congue ut metus sit amet, aliquam gravida quam. Etiam dictum faucibus rutrum. Mauris aliquam lacus et.</p>
+            <p>The visualization below shows the number of published ACL papers per year, for the 10 most popular languages. It clearly shows that the
+            field of NLP research has grown enormously over the years. Besides that, most papers - not surprisingly - work on English data. The next
+            group is also not surprising: a large share of the papers actually do not mention <i>any</i> language at all. In practice, that usually
+            means that the authors worked on English data, but consider it the "default" language. For the papers marked "No language", no language was named
+            <i>anywhere</i> in the paper. Also interesting is the sudden growth of Chinese NLP research from around 2000.</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique arcu turpis, in aliquet leo fermentum ac. Nam ac luctus velit. Fusce quis felis vitae libero vulputate tristique vitae id dolor. Integer velit libero, congue ut metus sit amet, aliquam gravida quam. Etiam dictum faucibus rutrum. Mauris aliquam lacus et.</p>
+            <div id="visualization_1"></div>
 
-          <h2 class="section-heading">Number of publications per language</h2>
+            <span class="text-muted">Hover over the legend to see an individual language!</span>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique arcu turpis, in aliquet leo fermentum ac. Nam ac luctus velit. Fusce quis felis vitae libero vulputate tristique vitae id dolor. Integer velit libero, congue ut metus sit amet, aliquam gravida quam. Etiam dictum faucibus rutrum. Mauris aliquam lacus et.</p>
+            <h2 class="section-heading">Languages and research topics</h2>
 
-          <div id="visualization_1"></div>
+            <p>Besides looking at just the languages that researchers have worked on, it is also interesting to look at
+            which languages were discussed in combination with which research topics. For example, do researchers work
+            more on Machine Translation with English, but more on phonology for French?</p>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique arcu turpis, in aliquet leo fermentum ac. Nam ac luctus velit. Fusce quis felis vitae libero vulputate tristique vitae id dolor. Integer velit libero, congue ut metus sit amet, aliquam gravida quam. Etiam dictum faucibus rutrum. Mauris aliquam lacus et.</p>
+            <p>The visualization below shows the 10 most popular languages in the corpus and 25 important research topics in NLP.
+              The size of the circle shows the number of papers that have been written about a particular language-topic combination.</p>
 
-          <!-- <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote> -->
+            <div id="visualization_2"></div>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique arcu turpis, in aliquet leo fermentum ac. Nam ac luctus velit. Fusce quis felis vitae libero vulputate tristique vitae id dolor. Integer velit libero, congue ut metus sit amet, aliquam gravida quam. Etiam dictum faucibus rutrum. Mauris aliquam lacus et.</p>
+            <p>The visualization shows that there is not a strong connection between a particular language and research topic. In the first
+              visualization, it was clear that work on Chinese is relatively new in NLP. That is also clear here, since most research for
+              Chinese is on Machine Translation and Machine Learning, which are relatively new topics in the field.</p>
 
-          <h2 class="section-heading">Languages and research topics</h2>
-
-          <div id="visualization_2"></div>
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique arcu turpis, in aliquet leo fermentum ac. Nam ac luctus velit. Fusce quis felis vitae libero vulputate tristique vitae id dolor. Integer velit libero, congue ut metus sit amet, aliquam gravida quam. Etiam dictum faucibus rutrum. Mauris aliquam lacus et.</p>
-
-          <!-- <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span> -->
-
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique arcu turpis, in aliquet leo fermentum ac. Nam ac luctus velit. Fusce quis felis vitae libero vulputate tristique vitae id dolor. Integer velit libero, congue ut metus sit amet, aliquam gravida quam. Etiam dictum faucibus rutrum. Mauris aliquam lacus et.</p>
-
+            </div>
         </div>
       </div>
     </div>
@@ -152,39 +125,49 @@
     // VISUALIZATION 1: STACKED AREA CHART
     // Inspiration from: https://www.d3-graph-gallery.com/graph/stackedarea_template.html
 
-    // Set up the bounds of the visualization
+    // Set up the bounds of the visualization.
     var margin = { top: 40, right: 40, bottom: 60, left: 30 };
     var width = 800 - margin.right - margin.left;
     var height = 550 - margin.top - margin.bottom;
 
-    // Set up the first SVG that gives us a canvas to draw on
+    // Make sure the values on the x-axis are parses as years.
+    var parseTime = d3.timeParse("%Y");
+
+    // Set up the first SVG that gives us a canvas to draw on.
     var svg = d3.select("#visualization_1").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    //Read the data
+    // Read the data
     d3.csv("/data/stacked_area.csv", (function(data) {
+
+      // Parse year data as years.
+      data.forEach(function(d) {
+        d.year = parseTime(d.year);
+      });
 
       // List of groups = header of the csv files
       var keys = data.columns.slice(1)
 
-      // color palette
+      // Color palette
       var color = d3.scaleOrdinal()
         .domain(keys)
         .range(d3.schemePaired);
 
-      //stack the data?
+      // Stack the data
       var stackedData = d3.stack()
         .keys(keys)
         (data)
 
       // Add X axis
-      var x = d3.scaleLinear()
+      var x = d3.scaleTime()
         .domain(d3.extent(data, function(d) { return d.year; }))
         .range([ 0, width ]);
+
       var xAxis = svg.append("g")
+        .style("font-size", 13)
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x).ticks(5))
 
@@ -208,6 +191,7 @@
         .domain([0, 650])
         .range([ height, 0 ]);
       svg.append("g")
+        .style("font-size", 13)
         .call(d3.axisLeft(y).ticks(5))
 
       // Add a clipPath: everything out of this area won't be drawn.
@@ -219,11 +203,10 @@
           .attr("x", 0)
           .attr("y", 0);
 
-      // Create the scatter variable: where both the circles and the brush take place
       var areaChart = svg.append('g')
         .attr("clip-path", "url(#clip)")
 
-      // Area generator
+      // Create area
       var area = d3.area()
         .x(function(d) { return x(d.data.year); })
         .y0(function(d) { return y(d[0]); })
@@ -241,7 +224,7 @@
 
         // What to do when one group is hovered
         var highlight = function(d){
-          console.log(d)
+          console.log("highlight", d);
           // reduce opacity of all groups
           d3.selectAll(".myArea").style("opacity", .1)
           // expect the one that is hovered
@@ -274,6 +257,7 @@
           .append("text")
             .attr("x", 25 + size*1.2)
             .attr("y", function(d,i){ return 20 + i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+            .style("font-size", 15)
             .style("fill", function(d){ return color(d)})
             .text(function(d){ return d})
             .attr("text-anchor", "left")
@@ -283,15 +267,14 @@
 
     }))
 
-    // VISUALIZATION 2: LANGUAGE-TOPIC SANKEY
-    // Inspiration from: TODO.
+    // VISUALIZATION 2: BUBBLE CHART
 
-    // Set up the bounds of the visualization
-    var margin_square = {top: 20, right: 20, bottom: 100, left: 205};
+    // Set up the bounds of the visualization.
+    var margin_square = {top: 30, right: 20, bottom: 100, left: 205};
     var width_square = 800 - margin_square.left - margin_square.right;
-    var height_square = 2500 - margin_square.top - margin_square.bottom;
+    var height_square = 1200 - margin_square.top - margin_square.bottom;
 
-    // Set up the first SVG that gives us a canvas to draw on
+    // Set up the first SVG that gives us a canvas to draw on.
     var svg_2 = d3.select("#visualization_2").append("svg")
       .attr("width", width_square + margin_square.left + margin_square.right)
       .attr("height", height_square + margin_square.top + margin_square.bottom)
@@ -335,24 +318,24 @@
         var mousemove = function(d) {
           tooltip
             .html(d.value + " papers")
-            .style("left", (d3.event.pageX - 200) + "px")
+            .style("left", (d3.event.pageX - 50) + "px")
             .style("top", (d3.event.pageY - 650) + "px");
         }
         var mouseleave = function(d) {
           tooltip.style("opacity",  0)
         }
 
-        // List of all variables and number of them
+        // List of all languages
         var languages = d3.set(data.map(function(d) { return d.x })).values()
-        // console.log("languages", languages);
+        // List of all topics
         var topics = d3.set(data.map(function(d) { return d.y })).values()
 
-        // color palette
+        // Color palette
         var color = d3.scaleOrdinal()
           .domain(languages)
           .range(d3.schemePaired);
 
-        // Create a size scale for bubbles on top right. Watch out: must be a rootscale!
+        // Create a size scale for bubbles. Must be a rootscale!
         var size = d3.scaleSqrt()
           .domain([0, 350])
           .range([0, 30]);

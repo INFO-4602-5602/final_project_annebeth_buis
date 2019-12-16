@@ -1,3 +1,6 @@
 wals_languages.csv/*
 corpus/*
 make_mock_data.py
+project_page/index_experiment.html
+languages.py
+project_page/data/language_map.csv

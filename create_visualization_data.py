@@ -55,18 +55,23 @@ with open('project_page/data/stacked_area.csv', 'w') as outfile:
 # DATA FOR VISUALIZATION 2
 
 lang_to_topics = defaultdict(int)
+topic_total_counts = defaultdict(int)
 for paper in acl_papers:
     if acl_papers[paper]["topic"]:
+        topic_total_counts[acl_papers[paper]["topic"]] +=  1
         if acl_papers[paper]["languages"]:
             languages = acl_papers[paper]["languages"].split(",")
             for l in languages:
                 lang_to_topics[(l, acl_papers[paper]["topic"])] += 1
 print(lang_to_topics)
+print(topic_total_counts)
+
+topics_by_count = [k for k, v in sorted([(k, v) for k, v in topic_total_counts.items()], key=lambda x: x[1], reverse=True)][:25]
 
 with open('project_page/data/matrix_data.csv', 'w') as outfile:
     langs = '"","' + '","'.join(sorted_langs)
     outfile.write(langs + '"' + "\n")
-    for t in topics:
+    for t in topics_by_count:
         topics = []
         new_line = ['"' + t + '"']
         for l in sorted_langs:
@@ -74,57 +79,3 @@ with open('project_page/data/matrix_data.csv', 'w') as outfile:
             new_line.append(str(lang_to_topics[(l, t)]))
         if sum(topics) > 0:
             outfile.write(",".join(new_line) + "\n")
-
-
-# # Here old
-#
-# data = {}
-#
-# nodes = set()
-# for example in examples[:10]:
-#     nodes.add(example["language"])
-#     for topic in example["topics"].split(", "):
-#         nodes.add(topic)
-#
-# data["nodes"] = [{"name": n} for n in list(nodes)]
-#
-# lang_to_topics = defaultdict(int)
-# for example in examples:
-#     topics = example["topics"].split(", ")
-#     for topic in topics:
-#         lang_to_topics[(example["language"], topic)] += 1
-#
-# with open('matrix_data.csv', 'w') as outfile:
-#     langs = '"",' + '","'.join(languages)
-#     outfile.write('"' + langs  + "\n")
-#     for t in keywords:
-#         new_line = ['"' + t + '"']
-#         for l in languages:
-#             new_line.append(str(lang_to_topics[(l, t)]))
-#         outfile.write(",".join(new_line) + "\n")
-
-# # {"source":"English","target":"MT","value":2},
-# data["links"] = []
-# for (lang, topic), count in lang_to_topics.items():
-#     data["links"].append({"source": lang, "target": topic, "value": count})
-#
-# with open('sankey_data.json', 'w') as outfile:
-#     json.dump(data, outfile, indent=4)
-
-# lang_to_topics = defaultdict(int)
-# for example in examples:
-#     topics = example["topics"].split(", ")
-#     for topic in topics:
-#         lang_to_topics[(example["language"], topic)] += 1
-# print(lang_to_topics)
-#
-# with open('data.csv', 'w') as outfile:
-#     langs = ",".join(languages)
-#     outfile.write("year" + "," + langs + "\n")
-#     for year in sorted(year_to_languages):
-#         lang_counts = [str(count) for lang, count in year_to_languages[year].items()]
-#         outfile.write(str(year) + "," + ",".join(lang_counts) + "\n")
-
-# with open('bipartite_data.csv', 'w') as outfile:
-#     for (lang, topic), count in lang_to_topics.items():
-#         outfile.write(lang + "," + topic + "," + str(count) + "\n")
